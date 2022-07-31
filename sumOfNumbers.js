@@ -1,10 +1,13 @@
 function sumOfNumbers(input) {
-    let numAsText = input[0];
-    let sum = 0;
+  let startingNum = Number(input[0]);
+  let total = 0;
+  let index = 1;
 
-    for (i = 0; i < numAsText.length; i++) {
-        let num = Number(numAsText[i]);
-        sum += num;
-    }
-    console.log(`The sum of the digits is:${sum}`);
+  while (total < startingNum) {
+    let currentNum = Number(input[index]);
+    total += currentNum;
+    index++;
+  }
+  console.log(total);
 }
+sumOfNumbers(["100", "10", "20", "30", "40"]);
